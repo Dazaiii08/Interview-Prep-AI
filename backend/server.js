@@ -15,7 +15,7 @@ const app = express();
 //Middleware to handle CORS
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://your-app-name.vercel.app", // ✅ update this after Vercel deploy
+  "https://interview-prep-ai-lemon.vercel.app",
   "https://interview-prep-ai-4v64.onrender.com", // ✅ add this
 ];
 
