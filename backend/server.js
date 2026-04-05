@@ -16,6 +16,7 @@ const app = express();
 const allowedOrigins = [
   "http://localhost:5173",
   "https://your-app-name.vercel.app", // ✅ update this after Vercel deploy
+  "https://interview-prep-ai-4v64.onrender.com", // ✅ add this
 ];
 
 app.use(
