@@ -5,7 +5,7 @@ import { APP_FEATURES } from "../utils/data";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Login from './Auth/Login.jsx';
-import SignUp from './auth/SignUp.jsx';
+import SignUp from './Auth/SignUp.jsx';
 import Modal from '../components/Modal';
 import { Sparkles } from "lucide-react";
 import { useContext } from 'react';
