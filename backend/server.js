@@ -13,12 +13,24 @@ const { generateInterviewQuestions, generateConceptExplaination } = require("./c
 const app = express();
 
 //Middleware to handle CORS
+const allowedOrigins = [
+  "http://localhost:5173",
+  "https://your-app-name.vercel.app", // ✅ update this after Vercel deploy
+];
+
 app.use(
-    cors({
-        origin:"*",
-        methods:["GET","POST","PUT","DELETE"],
-        allowedHeaders:["Content-Type","Authorization"],
-    })
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
 );
 
 connectDB()
